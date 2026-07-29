@@ -94,21 +94,27 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   width: fit-content;
+  padding: 6px 15px 6px 6px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
 .brand-symbol {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   place-items: center;
-  border: 1px solid rgba(200, 161, 90, 0.48);
+  border: 1px solid rgba(7, 9, 8, 0.18);
   border-radius: 50%;
+  background: var(--bg);
   color: var(--gold);
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 900;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.04em;
 }
 
 .brand-text,
@@ -126,7 +132,9 @@ a {
 }
 
 .brand-text {
-  color: var(--text);
+  color: var(--bg);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
 }
 
 .site-nav {
@@ -672,7 +680,6 @@ a {
     border-radius: 24px;
   }
 
-  .brand-text,
   .header-link {
     display: none;
   }
