@@ -5,6 +5,7 @@ const revealItems = document.querySelectorAll(".reveal");
 const countItems = document.querySelectorAll("[data-count]");
 const tiltItems = document.querySelectorAll("[data-tilt]");
 const parallaxItems = document.querySelectorAll("[data-parallax]");
+const depthScenes = document.querySelectorAll("[data-depth-scene]");
 const cursorOrb = document.querySelector("[data-cursor-orb]");
 const year = document.querySelector("[data-year]");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -117,6 +118,44 @@ if (!prefersReducedMotion && hasFinePointer) {
   });
 }
 
+const depthSceneState = new WeakMap();
+
+const applyDepthScene = (scene) => {
+  const state = depthSceneState.get(scene);
+  if (!state) return;
+
+  scene.querySelectorAll("[data-depth]").forEach((layer) => {
+    const depth = Number(layer.dataset.depth) || 0;
+    const x = state.x * depth;
+    const y = state.y * depth + state.scroll * depth * 0.28;
+    const scale = layer.classList.contains("scene-bg") ? " scale(1.06)" : "";
+    layer.style.transform = `translate3d(${x}px, ${y}px, 0)${scale}`;
+  });
+};
+
+if (!prefersReducedMotion) {
+  depthScenes.forEach((scene) => {
+    depthSceneState.set(scene, { x: 0, y: 0, scroll: 0 });
+
+    if (hasFinePointer) {
+      scene.addEventListener("pointermove", (event) => {
+        const rect = scene.getBoundingClientRect();
+        const state = depthSceneState.get(scene);
+        state.x = (event.clientX - rect.left) / rect.width - 0.5;
+        state.y = (event.clientY - rect.top) / rect.height - 0.5;
+        applyDepthScene(scene);
+      });
+
+      scene.addEventListener("pointerleave", () => {
+        const state = depthSceneState.get(scene);
+        state.x = 0;
+        state.y = 0;
+        applyDepthScene(scene);
+      });
+    }
+  });
+}
+
 let ticking = false;
 
 const syncParallax = () => {
@@ -126,6 +165,17 @@ const syncParallax = () => {
     const distance = rect.top + rect.height / 2 - viewportCenter;
     const offset = Math.max(Math.min(distance * -0.025, 9), -9);
     item.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+  });
+
+  depthScenes.forEach((scene) => {
+    const state = depthSceneState.get(scene);
+    if (!state) return;
+
+    const rect = scene.getBoundingClientRect();
+    const viewportCenter = window.innerHeight / 2;
+    const distance = rect.top + rect.height / 2 - viewportCenter;
+    state.scroll = Math.max(Math.min(distance * -0.012, 7), -7);
+    applyDepthScene(scene);
   });
 
   ticking = false;

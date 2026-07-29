@@ -61,17 +61,47 @@
           </div>
         </div>
 
-        <div class="hero-board reveal" data-tilt aria-label="Vizuál lesníckej práce">
+        <div class="hero-board parallax-scene reveal" data-depth-scene aria-label="3D scéna pracovníka s motorovou pílou">
           <div class="live-badge"><span></span> pripravené na zákazku</div>
-          <div class="image-panel image-panel-large" data-parallax>
-            <span>Prevádzka v lese</span>
+          <div class="scene-layer scene-bg" data-depth="-8"></div>
+          <div class="scene-layer scene-lines" data-depth="-4"></div>
+          <div class="scene-layer scene-dust" data-depth="6" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
           </div>
-          <div class="metric-card">
+          <svg class="scene-layer scene-worker" data-depth="14" viewBox="0 0 520 620" role="img" aria-label="Pracovník s motorovou pílou pri dreve">
+            <defs>
+              <linearGradient id="suitGradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#2d352f" />
+                <stop offset="1" stop-color="#0c100d" />
+              </linearGradient>
+              <linearGradient id="sawGradient" x1="0" x2="1">
+                <stop offset="0" stop-color="#f0b45f" />
+                <stop offset="1" stop-color="#8a4d24" />
+              </linearGradient>
+            </defs>
+            <path class="worker-shadow" d="M112 535 C190 492 378 500 456 550 C358 586 206 590 112 535Z" />
+            <path class="worker-leg" d="M306 290 C330 360 345 430 330 570 L276 570 C272 472 260 382 226 306Z" />
+            <path class="worker-leg worker-leg-back" d="M374 280 C410 354 430 438 420 578 L366 578 C360 482 340 392 306 302Z" />
+            <path class="worker-boot" d="M264 560 L338 560 C350 568 350 588 328 592 L250 592 C242 580 246 566 264 560Z" />
+            <path class="worker-boot worker-boot-back" d="M356 568 L432 568 C446 576 446 596 422 600 L342 600 C334 586 338 574 356 568Z" />
+            <path class="worker-body" d="M206 154 C266 118 348 126 392 186 C372 238 350 290 310 322 C266 312 224 290 184 252 C186 214 192 178 206 154Z" />
+            <path class="worker-arm" d="M202 222 C154 260 130 304 122 350 L164 368 C184 318 212 284 248 260Z" />
+            <path class="worker-arm worker-arm-front" d="M348 220 C318 266 292 302 252 328 L276 366 C334 338 378 296 402 238Z" />
+            <circle class="worker-helmet" cx="310" cy="96" r="48" />
+            <path class="helmet-visor" d="M270 104 C304 82 344 82 372 106 C342 120 306 122 270 104Z" />
+            <path class="saw-body" d="M86 326 C112 296 176 290 222 316 C238 326 244 352 228 370 C184 390 126 384 92 356 C78 346 76 336 86 326Z" />
+            <path class="saw-handle" d="M164 298 C190 268 240 278 252 320" />
+            <path class="saw-blade" d="M216 346 C292 334 372 346 454 386 C360 404 286 398 210 374Z" />
+            <path class="saw-chain" d="M230 356 C296 350 360 360 430 386" />
+          </svg>
+          <div class="scene-layer scene-log" data-depth="22" aria-hidden="true">
+            <span class="log-face"></span>
+            <span class="log-cut"></span>
+          </div>
+          <div class="metric-card scene-metric" data-depth="10">
             <span>Vznik firmy</span>
             <strong data-count="2013">2013</strong>
-          </div>
-          <div class="image-panel image-panel-small" data-parallax>
-            <span>Drevná hmota</span>
           </div>
         </div>
       </section>
