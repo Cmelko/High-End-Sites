@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="LIGLES s.r.o. - prémiová prezentácia pilčíckych, manipulačných a lesníckych prác v lese."
+    />
+    <title>LIGLES s.r.o. | Lesnícke práce bez kompromisov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-orb" data-cursor-orb aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="LIGLES s.r.o.">
+        <span class="brand-symbol">L</span>
+        <span class="brand-text">LIGLES</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span class="sr-only">Otvoriť menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Hlavná navigácia">
+        <a href="#sluzby">Služby</a>
+        <a href="#proces">Proces</a>
+        <a href="#profil">Profil</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <a class="header-link" href="tel:+421915812350">0915 812 350</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="kicker">Lesníctvo / Pilčícke práce / Manipulácia dreva</p>
+          <h1>
+            <span class="title-line">Lesné práce</span>
+            <span class="title-line title-line-muted">vedené presne, bezpečne a bez zbytočného hluku.</span>
+          </h1>
+          <p class="hero-lead">
+            LIGLES s.r.o. je stabilná spoločnosť zo Zábiedova pôsobiaca v lesnom
+            hospodárstve. Prezentácia je postavená na dôvere, jasnom rozsahu služieb
+            a rýchlom kontakte pre nové zákazky.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tel:+421915812350">Zavolať a dohodnúť práce</a>
+            <a class="button button-ghost" href="#sluzby">Pozrieť rozsah</a>
+          </div>
+        </div>
+
+        <div class="hero-board parallax-scene reveal" data-depth-scene aria-label="3D scéna pracovníka s motorovou pílou">
+          <div class="live-badge"><span></span> pripravené na zákazku</div>
+          <div class="scene-layer scene-bg" data-depth="-8"></div>
+          <div class="scene-layer scene-lines" data-depth="-4"></div>
+          <div class="scene-layer scene-dust" data-depth="6" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <svg class="scene-layer scene-worker" data-depth="14" viewBox="0 0 520 620" role="img" aria-label="Pracovník s motorovou pílou pri dreve">
+            <defs>
+              <linearGradient id="suitGradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#2d352f" />
+                <stop offset="1" stop-color="#0c100d" />
+              </linearGradient>
+              <linearGradient id="sawGradient" x1="0" x2="1">
+                <stop offset="0" stop-color="#f0b45f" />
+                <stop offset="1" stop-color="#8a4d24" />
+              </linearGradient>
+            </defs>
+            <path class="worker-shadow" d="M112 535 C190 492 378 500 456 550 C358 586 206 590 112 535Z" />
+            <path class="worker-leg" d="M306 290 C330 360 345 430 330 570 L276 570 C272 472 260 382 226 306Z" />
+            <path class="worker-leg worker-leg-back" d="M374 280 C410 354 430 438 420 578 L366 578 C360 482 340 392 306 302Z" />
+            <path class="worker-boot" d="M264 560 L338 560 C350 568 350 588 328 592 L250 592 C242 580 246 566 264 560Z" />
+            <path class="worker-boot worker-boot-back" d="M356 568 L432 568 C446 576 446 596 422 600 L342 600 C334 586 338 574 356 568Z" />
+            <path class="worker-body" d="M206 154 C266 118 348 126 392 186 C372 238 350 290 310 322 C266 312 224 290 184 252 C186 214 192 178 206 154Z" />
+            <path class="worker-arm" d="M202 222 C154 260 130 304 122 350 L164 368 C184 318 212 284 248 260Z" />
+            <path class="worker-arm worker-arm-front" d="M348 220 C318 266 292 302 252 328 L276 366 C334 338 378 296 402 238Z" />
+            <circle class="worker-helmet" cx="310" cy="96" r="48" />
+            <path class="helmet-visor" d="M270 104 C304 82 344 82 372 106 C342 120 306 122 270 104Z" />
+            <path class="saw-body" d="M86 326 C112 296 176 290 222 316 C238 326 244 352 228 370 C184 390 126 384 92 356 C78 346 76 336 86 326Z" />
+            <path class="saw-handle" d="M164 298 C190 268 240 278 252 320" />
+            <path class="saw-blade" d="M216 346 C292 334 372 346 454 386 C360 404 286 398 210 374Z" />
+            <path class="saw-chain" d="M230 356 C296 350 360 360 430 386" />
+          </svg>
+          <div class="scene-layer scene-log" data-depth="22" aria-hidden="true">
+            <span class="log-face"></span>
+            <span class="log-cut"></span>
+          </div>
+          <div class="metric-card scene-metric" data-depth="10">
+            <span>Vznik firmy</span>
+            <strong data-count="2013">2013</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="motion-marquee" aria-label="Kľúčové služby">
+        <div class="marquee-track">
+          <span>Pilčícke práce</span>
+          <span>Manipulácia dreva</span>
+          <span>Služby v lesníctve</span>
+          <span>Zábiedovo</span>
+          <span>Bezpečný postup</span>
+          <span>Pilčícke práce</span>
+          <span>Manipulácia dreva</span>
+          <span>Služby v lesníctve</span>
+          <span>Zábiedovo</span>
+          <span>Bezpečný postup</span>
+        </div>
+      </section>
+
+      <section class="proof-strip reveal" aria-label="Základné údaje">
+        <div>
+          <span>IČO</span>
+          <strong>47541032</strong>
+        </div>
+        <div>
+          <span>Sídlo</span>
+          <strong>Zábiedovo, Orava</strong>
+        </div>
+        <div>
+          <span>Činnosť</span>
+          <strong>Služby v lesníctve</strong>
+        </div>
+        <div>
+          <span>Kontakt</span>
+          <strong>0915 812 350</strong>
+        </div>
+      </section>
+
+      <section class="section" id="sluzby">
+        <div class="section-intro reveal">
+          <p class="kicker">Rozsah služieb</p>
+          <h2>Práce, ktoré potrebujú disciplínu, skúsenosť a dobrú koordináciu.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-card-tall reveal" data-tilt>
+            <span class="card-index">01</span>
+            <h3>Pilčícke práce v lese</h3>
+            <p>
+              Výrub a spracovanie drevnej hmoty v lesnom prostredí s dôrazom na
+              bezpečný postup, rešpekt k terénu a praktický výsledok.
+            </p>
+          </article>
+
+          <article class="bento-card reveal" data-tilt>
+            <span class="card-index">02</span>
+            <h3>Manipulačné práce</h3>
+            <p>
+              Príprava, manipulácia a triedenie drevnej hmoty podľa potrieb zákazky
+              a ďalšieho využitia.
+            </p>
+          </article>
+
+          <article class="bento-card image-card reveal" data-tilt data-parallax>
+            <span>ťažba / manipulácia / porast</span>
+          </article>
+
+          <article class="bento-card reveal" data-tilt>
+            <span class="card-index">03</span>
+            <h3>Služby v lesníctve</h3>
+            <p>
+              Podpora pre vlastníkov, správcov a obchodných partnerov pri prácach
+              súvisiacich s lesným hospodárstvom.
+            </p>
+          </article>
+
+          <article class="bento-card reveal" data-tilt>
+            <span class="card-index">04</span>
+            <h3>Drevo a spolupráca</h3>
+            <p>
+              Firma je verejne evidovaná aj v oblasti veľkoobchodu s drevom a
+              súvisiacim materiálom.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="statement-section reveal">
+        <p>
+          High-end stránka pre lesnícku firmu nemá pôsobiť ako katalóg efektov.
+          Má vyzerať pevne, dôveryhodne a dospelo — rovnako ako práca, ktorú reprezentuje.
+        </p>
+      </section>
+
+      <section class="section process-section" id="proces">
+        <div class="section-intro reveal">
+          <p class="kicker">Ako prebieha zákazka</p>
+          <h2>Jednoduchý proces, ktorý drží prácu pod kontrolou.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span>01</span>
+            <div>
+              <h3>Obhliadka a rozsah</h3>
+              <p>Lokalita, prístup, stav porastu a očakávaný výstup sa vyjasnia pred začiatkom.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>02</span>
+            <div>
+              <h3>Pracovný postup</h3>
+              <p>Postup sa nastaví podľa terénu, počasia, bezpečnosti a nadväznosti manipulácie.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>03</span>
+            <div>
+              <h3>Realizácia v lese</h3>
+              <p>Pilčícke a manipulačné práce prebiehajú s dôrazom na presnosť a koordináciu.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>04</span>
+            <div>
+              <h3>Odovzdanie výsledku</h3>
+              <p>Pracovisko a drevná hmota sú pripravené podľa dohody pre ďalší krok.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="profile-section" id="profil">
+        <div class="profile-copy reveal">
+          <p class="kicker">Firemný profil</p>
+          <h2>LIGLES s.r.o. — lokálna firma so zázemím v lesníctve.</h2>
+          <p>
+            Spoločnosť vznikla v roku 2013 a sídli na adrese Krížna 234/1,
+            028 01 Zábiedovo. Verejné registre ju uvádzajú v oblasti lesného
+            hospodárstva, služieb v lesníctve a veľkoobchodu s drevom.
+          </p>
+        </div>
+
+        <aside class="company-panel reveal">
+          <dl>
+            <div>
+              <dt>Názov</dt>
+              <dd>LIGLES s.r.o.</dd>
+            </div>
+            <div>
+              <dt>Sídlo</dt>
+              <dd>Krížna 234/1, 028 01 Zábiedovo</dd>
+            </div>
+            <div>
+              <dt>DIČ</dt>
+              <dd>2023977516</dd>
+            </div>
+            <div>
+              <dt>IČ DPH</dt>
+              <dd>SK2023977516</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="contact-section reveal" id="kontakt">
+        <div>
+          <p class="kicker">Kontakt</p>
+          <h2>Máte zákazku v lese?</h2>
+          <p>Zavolajte a dohodnite lokalitu, rozsah prác a najbližší vhodný postup.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="phone-link" href="tel:+421915812350">0915 812 350</a>
+          <a
+            class="button button-ghost"
+            href="https://www.google.com/maps/search/?api=1&query=Kr%C3%AD%C5%BEna%20234%2F1%2C%20028%2001%20Z%C3%A1biedovo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Otvoriť adresu
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> LIGLES s.r.o.</span>
+      <span>Koncept high-end web prezentácie</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
