@@ -18,6 +18,7 @@
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-orb" data-cursor-orb aria-hidden="true"></div>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="LIGLES s.r.o.">
@@ -46,8 +47,8 @@
         <div class="hero-copy reveal">
           <p class="kicker">Lesníctvo / Pilčícke práce / Manipulácia dreva</p>
           <h1>
-            Lesné práce
-            <span>vedené presne, bezpečne a bez zbytočného hluku.</span>
+            <span class="title-line">Lesné práce</span>
+            <span class="title-line title-line-muted">vedené presne, bezpečne a bez zbytočného hluku.</span>
           </h1>
           <p class="hero-lead">
             LIGLES s.r.o. je stabilná spoločnosť zo Zábiedova pôsobiaca v lesnom
@@ -60,17 +61,33 @@
           </div>
         </div>
 
-        <div class="hero-board reveal" aria-label="Vizuál lesníckej práce">
-          <div class="image-panel image-panel-large">
+        <div class="hero-board reveal" data-tilt aria-label="Vizuál lesníckej práce">
+          <div class="live-badge"><span></span> pripravené na zákazku</div>
+          <div class="image-panel image-panel-large" data-parallax>
             <span>Prevádzka v lese</span>
           </div>
           <div class="metric-card">
             <span>Vznik firmy</span>
-            <strong>2013</strong>
+            <strong data-count="2013">2013</strong>
           </div>
-          <div class="image-panel image-panel-small">
+          <div class="image-panel image-panel-small" data-parallax>
             <span>Drevná hmota</span>
           </div>
+        </div>
+      </section>
+
+      <section class="motion-marquee" aria-label="Kľúčové služby">
+        <div class="marquee-track">
+          <span>Pilčícke práce</span>
+          <span>Manipulácia dreva</span>
+          <span>Služby v lesníctve</span>
+          <span>Zábiedovo</span>
+          <span>Bezpečný postup</span>
+          <span>Pilčícke práce</span>
+          <span>Manipulácia dreva</span>
+          <span>Služby v lesníctve</span>
+          <span>Zábiedovo</span>
+          <span>Bezpečný postup</span>
         </div>
       </section>
 
@@ -100,7 +117,7 @@
         </div>
 
         <div class="bento-grid">
-          <article class="bento-card bento-card-tall reveal">
+          <article class="bento-card bento-card-tall reveal" data-tilt>
             <span class="card-index">01</span>
             <h3>Pilčícke práce v lese</h3>
             <p>
@@ -109,7 +126,7 @@
             </p>
           </article>
 
-          <article class="bento-card reveal">
+          <article class="bento-card reveal" data-tilt>
             <span class="card-index">02</span>
             <h3>Manipulačné práce</h3>
             <p>
@@ -118,11 +135,11 @@
             </p>
           </article>
 
-          <article class="bento-card image-card reveal">
+          <article class="bento-card image-card reveal" data-tilt data-parallax>
             <span>ťažba / manipulácia / porast</span>
           </article>
 
-          <article class="bento-card reveal">
+          <article class="bento-card reveal" data-tilt>
             <span class="card-index">03</span>
             <h3>Služby v lesníctve</h3>
             <p>
@@ -131,7 +148,7 @@
             </p>
           </article>
 
-          <article class="bento-card reveal">
+          <article class="bento-card reveal" data-tilt>
             <span class="card-index">04</span>
             <h3>Drevo a spolupráca</h3>
             <p>
